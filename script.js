@@ -52,10 +52,12 @@ function reset() {
 
 // Reset Button
 const resetBtn = document.querySelector("#reset");
-resetBtn.addEventListener("click", () => {
+resetBtn.addEventListener("click", (e) => {
   reset();
   canvas();
   draw();
+
+  e.preventDefault();
 });
 
 // Mode Selection
