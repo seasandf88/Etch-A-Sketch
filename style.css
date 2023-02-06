@@ -94,7 +94,7 @@ a {
 
 #main-header {
     background-color: var(--secondary-color);
-    height: 10rem;
+    min-height: 10rem;
     text-align: center;
     display: flex;
     justify-content: center;
@@ -263,7 +263,7 @@ input[type=range]::-moz-range-thumb {
 }
 
 footer {
-    height: 5rem;
+    min-height: 50px;
     background-color: var(--secondary-color);
     display: flex;
     justify-content: center;
