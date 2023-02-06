@@ -65,7 +65,7 @@ const methodSelectors = document.querySelectorAll(".selection");
 let currentColor = "#FF6A3D";
 
 methodSelectors.forEach(function (selector) {
-  selector.addEventListener("click", () => {
+  selector.addEventListener("click", (e) => {
     clearBtnActive();
     if (selector.id == "custom") {
       selector.classList.add("btn-active");
@@ -108,7 +108,7 @@ methodSelectors.forEach(function (selector) {
         });
       });
     }
-    selector.removeEventListener("click", null);
+    e.preventDefault();
   });
 });
 
