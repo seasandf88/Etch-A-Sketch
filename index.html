@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Etch-A-Sketch</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body ondragstart="return false;" ondrop="return false;">
+    <header id="main-header">
+      <div class="container">
+        <h1><span id="etch">Etch </span><span id="a">A</span> Sketch</h1>
+        <br />
+        <h2>Click and Drag to Start Sketching!</h2>
+      </div>
+    </header>
+    <section id="main-section">
+      <div class="container">
+        <div class="controls">
+          <div id="slider-group">
+            <h2 class="subtitle">Resolution Slider</h2>
+            <div class="group">
+              <input
+                class="slider"
+                type="range"
+                min="16"
+                max="96"
+                value="32"
+                step="4"
+                class="slider"
+              />
+              <div class="slider-value"></div>
+            </div>
+          </div>
+          <div class="method-group">
+            <h2 class="subtitle">Modes</h2>
+            <div id="method-selection">
+              <div id="custom-group">
+                <a href="#" id="custom" class="btn selection btn-active"
+                  >Custom Color</a
+                >
+                <input
+                  type="color"
+                  name="color-picker"
+                  id="color-picker"
+                  value="#FF6A3D"
+                />
+              </div>
+              <a href="#" id="darken" class="btn selection">Darken</a>
+              <a href="#" id="lighten" class="btn selection">Lighten</a>
+              <a href="#" id="random" class="btn selection">Random</a>
+              <a href="#" id="eraser" class="btn selection">Eraser</a>
+              <a href="#" id="picker" class="btn btn-secondary selection small"
+                >color picker</a
+              >
+              <a href="#" id="grid" class="btn btn-secondary selection small"
+                >Grid Toggle</a
+              >
+              <a href="#" id="reset" class="btn">Reset</a>
+            </div>
+          </div>
+        </div>
+        <div class="canvas"></div>
+      </div>
+    </section>
+
+    <footer>
+      <p>Copyright &copy; 2023 Fahed Nassar. All Rights Reserved</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
